@@ -5,8 +5,6 @@
  */
 package buoi3;
 
-import static buoi3.PrimeNumbers.soNT;
-import static java.lang.Math.sqrt;
 import java.util.Scanner;
 
 /**
@@ -15,21 +13,18 @@ import java.util.Scanner;
  */
 public class Buoi3 {
 
-   
     public static void main(String[] args) {
-        
+
         float delta;
-        int n,giai_thua = 1;
-        
-        
-       Scanner input = new Scanner(System.in) ;
-       
-       System.out.print("nhap n > ");
-       n=input.nextInt();
-       
-       
-       /* bai 6/
-//       System.out.print("Nhập số nguyên dương a = ");
+        int n, giai_thua = 1;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("nhap n > ");
+        n = input.nextInt();
+
+        /* bai 6/
+          System.out.print("Nhập số nguyên dương a = ");
 //        int a =input.nextInt();
 //        System.out.print("Nhập số nguyên dương b = ");
 //        int b = input.nextInt();
@@ -44,29 +39,27 @@ public class Buoi3 {
        
        
        /*bai 7/
-//       for (int i = 0; i < n; i++) {
-//            System.out.print(fibonacci(i) + " ");
-//        }
+       for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + " ");
+       }
        
        /*bai 3*/
-//       if (soNT(n)) {
-//           System.out.println(n + " la so nguyen to");
-//       } else {
-//           System.out.println(n + " ko phai so nguyen to");
-//       }
-//       int dem = 0; // đếm số số nguyên tố
-//        int i = 2;   // tìm số nguyên tố bắt dầu từ số 2
-//        while (dem < n) {
-//            if (soNT(i)) {
-//                System.out.print(i + " ");
-//                dem++;
-//            }
-//            i++;
-//        }
+        if (soNT(n)) {
+            System.out.println(n + " la so nguyen to");
+        } else {
+            System.out.println(n + " ko phai so nguyen to");
+        }
+        int dem = 0; // đếm số số nguyên tố
+        int i = 2;   // tìm số nguyên tố bắt dầu từ số 2
+        while (dem < n) {
+            if (soNT(i)) {
+                System.out.print(i + " ");
+                dem++;
+            }
+            i++;
+        }
 
-       
-       
-       /*bai 2*/
+        /*bai 2*/
 //        System.out.print("nhap n > ");
 //        n=input.nextInt();
 //        for(int i =1;i<=n;i++)
@@ -75,8 +68,8 @@ public class Buoi3 {
 //        }
 //               System.out.println(giai_thua);
 
-/* bai 1*/
-//        System.out.println("giai phuong trinh bac 2 ");
+        /* bai 1*/
+//       System.out.println("giai phuong trinh bac 2 ");
 //        System.out.print(" a = ");
 //        int a = input.nextInt();
 //        System.out.print(" b = ");
@@ -100,21 +93,21 @@ public class Buoi3 {
 //                    System.out.println("X2 = "+(-b)+sqrt(delta)/2*a);
 //                    
 //                }
-        
-        
-}
-     public static boolean soNT(int n) {
-       if (n <= 1) {
-           return false;
-       }
-       for (int i = 2; i <= Math.sqrt(n); i++) {
-           if (n % i == 0) {
-               return false;
-           }
-       }
-       return true;
-   }
-     public static int fibonacci(int n) {
+    }
+
+    public static boolean soNT(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int fibonacci(int n) {
         if (n < 0) {
             return -1;
         } else if (n == 0 || n == 1) {
@@ -123,15 +116,15 @@ public class Buoi3 {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
-     public static int USCLN(int a, int b) {
-        if (b == 0) return a;
+
+    public static int USCLN(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
         return USCLN(b, a % b);
     }
-     
-    
+
     public static int BSCNN(int a, int b) {
         return (a * b) / USCLN(a, b);
     }
-
-
-    
+}
