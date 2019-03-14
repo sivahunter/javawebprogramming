@@ -5,6 +5,8 @@
  */
 package bai2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ASUS
@@ -34,11 +36,11 @@ public class MyDate {
         return month;
     }
 
-    public void setMonth(String month) {
-        if(month.toUpperCase().equals("may"))
-        {}
-        this.month = 5;
+    public void setMonth(int month) {
+        this.month = month;
     }
+
+    
 
     public int getYear() {
         return year;
@@ -47,12 +49,36 @@ public class MyDate {
     public void setYear(int year) {
         this.year = year;
     }
-
-    @Override
-    public String toString() {
-        return "" + "" + date + "/" + month + "/" + year ;
+    @SuppressWarnings("empty-statement")
+    public String add(int date,int month,int year){
+       
+        if(this.date+date>30)
+        {
+            this.month++;
+        }
+        if (this.month==2)
+        {
+            if(this.date+date>28)
+            {
+                this.month++;
+            }
+        }
+        if(this.month+month>12)
+        {
+            this.year++;
+        }
+        return  this.date + "/" + this.month + "/" + this.year ; 
     }
 
+//    @Override
+//    public String toString() {
+//        return date + "/" + month + "/" + year ;
+//    }
+   @Override
+    public String toString(){
+        return "ngay "+date+" thang "+month+" nam "+year;
+        
+    }
    
  
 }
