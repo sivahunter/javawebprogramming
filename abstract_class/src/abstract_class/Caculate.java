@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bai12;
-
-import java.util.Scanner;
+package abstract_class;
 
 /**
  *
  * @author ASUS
  */
-public abstract class DaGiac {
-    public Scanner sc = new Scanner(System.in);
-    public abstract double area();
-    public abstract double perimeter();
-  
+public abstract class Caculate {
+    
+    
+    public abstract double avarage(int[] arr);
+    
+    public abstract double sum(int[] arr );
     
 }

@@ -3,24 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bai11;
+package COM.JAVA.DEMO.STUDENT;
+
+import java.awt.Menu;
 
 /**
  *
  * @author ASUS
  */
 public class main {
+    
+    
     public static void main(String[] args) {
-        maTrix mt1= new maTrix();
-        maTrix mt2= new maTrix();
-                
-//        int max = tongdong(0),chiso=0;
-        mt1.nhapmatrix();
-        mt2.nhapmatrix();
-        mt1.xuatmatrix();
+        Menu mn = new Menu();
         
-        
-       
-        
+
     }
 }
